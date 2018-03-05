@@ -1,0 +1,255 @@
+------------------------------------------------
+Query1: hurricane isabel damage
+------------------------------------------------
+
+Lucene Top 5:
+1 Q0 Effects_of_Hurricane_Isabel_in_New_Jersey 1 0.4622044 LuceneNoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_Delaware 2 0.45129573 LuceneNoStopNoStem
+1 Q0 Hurricane_Isabel 3 0.4455207 LuceneNoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_New_York_and_New_England 4 0.4292839 LuceneNoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_Pennsylvania 5 0.40328342 LuceneNoStopNoStem
+
+BM25 Top 5:
+1 Q0 Hurricane_Isabel 1 4.586187362720076 OkapiBM25NoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_Virginia 2 4.5663150792281275 OkapiBM25NoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_Maryland_and_Washington,_D.C. 3 4.562384364055708 OkapiBM25NoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_Pennsylvania 4 4.536834315556652 OkapiBM25NoStopNoStem
+1 Q0 Effects_of_Hurricane_Isabel_in_New_York_and_New_England 5 4.530848953951875 OkapiBM25NoStopNoStem
+
+Remarks:
+- 3 documents in commmon, but with different ranking (Hurricane_Isabel,
+  Effects_of_Hurricane_Isabel_in_New_York_and_New_England, Effects_of_Hurricane_Isabel_in_Pennsylvania)
+- The Lucene results show top 4 scores just about same and 5th with a comparitively larger drop
+- After 1st doc of BM25 Top 5, there is a large drop in score, 2nd and 3rd are around while 4th and 5th are around
+  with a large drop in between
+- The top 2 results of Lucene Top 5 are absent in BM25 Top 5, however, by quick skimming,
+  a user may feel that these 2 are good results too as they give much information about
+  hurricane isabel damage
+
+------------------------------------------------
+Query2: forecast models
+------------------------------------------------
+
+Lucene Top 5:
+2 Q0 Tropical_cyclone_track_forecasting 1 0.31898507 LuceneNoStopNoStem
+2 Q0 Tropical_cyclone_rainfall_forecasting 2 0.27113998 LuceneNoStopNoStem
+2 Q0 Weather_forecasting 3 0.21726683 LuceneNoStopNoStem
+2 Q0 Tropical_cyclone_forecasting 4 0.20717229 LuceneNoStopNoStem
+2 Q0 National_Weather_Service 5 0.19401625 LuceneNoStopNoStem
+
+BM25 Top 5:
+2 Q0 Tropical_cyclone_track_forecasting 1 6.654657170584773 OkapiBM25NoStopNoStem
+2 Q0 Tropical_cyclone_rainfall_forecasting 2 6.578894083605244 OkapiBM25NoStopNoStem
+2 Q0 Weather_forecasting 3 6.543603420574083 OkapiBM25NoStopNoStem
+2 Q0 Tropical_cyclone_forecasting 4 6.03954476797666 OkapiBM25NoStopNoStem
+2 Q0 National_Weather_Service 5 5.883975582709958 OkapiBM25NoStopNoStem
+
+Remarks:
+- All 5 documents are exactly same with same ranking
+- For Lucene Top 5, after 1st doc, score drops largely, even more large drop after 2nd doc, however,
+  3rd, 4th and 5th docs have consecutive scores more around each other
+- For BM25 Top 5, 1st 3 are around each other followed by significant drops between
+  3rd and 4th and 4th and 5th
+- On skimming the above 5 docs, the ranking seems to be good enough
+
+------------------------------------------------
+Query3: green energy canada
+------------------------------------------------
+
+Lucene Top 5:
+3 Q0 Mechanical_energy 1 0.32049534 LuceneNoStopNoStem
+3 Q0 United_States_Department_of_Energy 2 0.2674667 LuceneNoStopNoStem
+3 Q0 Canada 3 0.20289552 LuceneNoStopNoStem
+3 Q0 Atlantic_Canada 4 0.18397379 LuceneNoStopNoStem
+3 Q0 Ontario 5 0.1791704 LuceneNoStopNoStem
+
+BM25 Top 5:
+3 Q0 Turboprop 1 5.6398138875044035 OkapiBM25NoStopNoStem
+3 Q0 Ontario 2 5.542718793104167 OkapiBM25NoStopNoStem
+3 Q0 Weather_radar 3 5.0823985166008745 OkapiBM25NoStopNoStem
+3 Q0 Taipei_101 4 5.047096447234488 OkapiBM25NoStopNoStem
+3 Q0 Hydro-Qu%C3%A9bec 5 4.939142274811688 OkapiBM25NoStopNoStem
+
+Remarks:
+- 1 document in common (Ontario) but different rankings
+- 3rd, 4th, 5th docs have Lecene consecutive scores around each other.
+- For BM25 Top 5, 1st 2 docs have consecutive scores around each other, followed by a large drop
+  and then 4th and 5th around each other
+- However, on skimming the above documents, except for Hydro-Qu%C3%A9bec,
+  all the documents give information related to canada or green energy,
+  but none of them give information about green energy in canada, which seems
+  to be the expecttion of the user firing this query
+
+------------------------------------------------
+Query4: heavy rains
+------------------------------------------------
+
+Lucene Top 5:
+4 Q0 2017_North_Indian_Ocean_cyclone_season 1 0.2179766 LuceneNoStopNoStem
+4 Q0 Landfall 2 0.19340858 LuceneNoStopNoStem
+4 Q0 Tropical_Storm_Marco_(2008) 3 0.17031565 LuceneNoStopNoStem
+4 Q0 Hurricane_Cleo 4 0.16749677 LuceneNoStopNoStem
+4 Q0 Flash_flood 5 0.16411263 LuceneNoStopNoStem
+
+BM25 Top 5:
+4 Q0 2017_North_Indian_Ocean_cyclone_season 1 4.553339905105916 OkapiBM25NoStopNoStem
+4 Q0 Hurricane_Cleo 2 4.362801835568109 OkapiBM25NoStopNoStem
+4 Q0 Hurricane_Hilda 3 4.330389916563915 OkapiBM25NoStopNoStem
+4 Q0 Hurricane_Michelle 4 4.327445406562678 OkapiBM25NoStopNoStem
+4 Q0 Hurricane_Stan 5 4.2863649697028485 OkapiBM25NoStopNoStem
+
+Remarks:
+- 2 docs in common (2017_North_Indian_Ocean_cyclone_season, Hurricane_Cleo), same top
+  ranking for 2017_North_Indian_Ocean_cyclone_season but different for Hurricane_Cleo
+- 3rd, 4th, 5th docs have Lecene consecutive scores around each other.
+- After 1st doc of BM25 Top 5, there is a large drop in score, followed by 4 docs with
+  scores closeby
+- The two approaches agree on the top ranked doc, which looks good on skimming it.
+
+------------------------------------------------
+Query5: hurricane music lyrics
+------------------------------------------------
+
+Lucene Top 5:
+5 Q0 Hurricane_(Natalie_Grant_album) 1 0.3739049 LuceneNoStopNoStem
+5 Q0 Hurricane_(Bridgit_Mendler_song) 2 0.30221322 LuceneNoStopNoStem
+5 Q0 Audioboxer 3 0.2856352 LuceneNoStopNoStem
+5 Q0 Hurricane_(Athlete_song) 4 0.2845568 LuceneNoStopNoStem
+5 Q0 Badman_(EP) 5 0.27700716 LuceneNoStopNoStem
+
+BM25 Top 5:
+5 Q0 Space_Oddity 1 9.19368927159682 OkapiBM25NoStopNoStem
+5 Q0 Vices_%26_Virtues 2 8.628977016341592 OkapiBM25NoStopNoStem
+5 Q0 Out_of_the_Wasteland 3 7.989250081452841 OkapiBM25NoStopNoStem
+5 Q0 Bajan_Style 4 7.936462008575588 OkapiBM25NoStopNoStem
+5 Q0 Tropical_cyclones_in_popular_culture 5 7.880478914356153 OkapiBM25NoStopNoStem
+
+Remarks:
+- No docs in common
+- After 1st of Lucene Top 5, there is a large score drop, followed by rest 4 with
+  comparitively lesser consecutive score differences
+- For BM25 Top 5, there are large score drops between 1st and 2nd, and between 2nd and 3rd,
+  comparatively lesser between 3rd and 4th, and between 4th and 5th
+- It looks like the user is trying to search lyrics of the song named hurricane, or maybe
+  lyrics of some song of album named hurricane. On skimming the above docs, the docs
+  Hurricane_(Bridgit_Mendler_song), Hurricane_(Athlete_song), Hurricane_(Natalie_Grant_album)
+  seems to be more relevant in the same order
+
+------------------------------------------------
+Query6: accumulated snow
+------------------------------------------------
+
+Lucene Top 5:
+6 Q0 Snow 1 0.35193473 LuceneNoStopNoStem
+6 Q0 Graupel 2 0.27478895 LuceneNoStopNoStem
+6 Q0 Winter_storm 3 0.27064073 LuceneNoStopNoStem
+6 Q0 Blizzard 4 0.22632062 LuceneNoStopNoStem
+6 Q0 Freezing_rain 5 0.18154775 LuceneNoStopNoStem
+
+BM25 Top 5:
+6 Q0 Hail 1 7.292857629528884 OkapiBM25NoStopNoStem
+6 Q0 Snow 2 6.990370544607686 OkapiBM25NoStopNoStem
+6 Q0 Graupel 3 6.89094571907086 OkapiBM25NoStopNoStem
+6 Q0 Freezing_rain 4 6.482030502243603 OkapiBM25NoStopNoStem
+6 Q0 Winter_storm 5 6.442238424421392 OkapiBM25NoStopNoStem
+
+Remarks:
+- 4 docs are common, but in different ranking order (Snow, Graupel, Winter_storm, Freezing_rain)
+- For Lucene Top 5, 2nd and 3rd have scores around, otherwise there are comparatively large
+  differences between consecutive scores
+- For BM25 Top 5, 4th and 5th have scores around, otherwise there are comparatively large
+  differences between consecutive scores
+- A user may like Hail more than Snow as they are searching for accumulated snow and not
+  just snow. So, BM25 seems to give more satisfiable result in this case. However, none of the
+  results seem to be totally irrelevant.
+
+------------------------------------------------
+Query7: snow accumulation
+------------------------------------------------
+
+Lucene Top 5:
+7 Q0 Snow_roller 1 0.41273385 LuceneNoStopNoStem
+7 Q0 Rain_and_snow_mixed 2 0.4092065 LuceneNoStopNoStem
+7 Q0 Snow 3 0.38178894 LuceneNoStopNoStem
+7 Q0 Ice_pellets 4 0.33581245 LuceneNoStopNoStem
+7 Q0 Winter_storm 5 0.31247663 LuceneNoStopNoStem
+
+BM25 Top 5:
+7 Q0 Ice_storm 1 8.914742551282375 OkapiBM25NoStopNoStem
+7 Q0 Rain_and_snow_mixed 2 8.879510338168982 OkapiBM25NoStopNoStem
+7 Q0 Ice_pellets 3 8.797833383652373 OkapiBM25NoStopNoStem
+7 Q0 Snow 4 8.70742530002126 OkapiBM25NoStopNoStem
+7 Q0 Winter_storm 5 8.508680981989603 OkapiBM25NoStopNoStem
+
+Remarks:
+- 3 docs in common with different rankings for Ice_pellets and Snow,
+  same ranking for Winter_storm and Rain_and_snow_mixed
+- For Lucene Top 5, 1st and 2nd have scores around, 4th and 5th have scores around,
+  otherwise there are comparatively large differences between consecutive scores
+- For BM25 Top 5, 1st and 2nd have scores around, otherwise there are comparatively
+  large differences between consecutive scores, a very large one between 4th and 5th
+- If Query6 and Query7 are compared, they look almost same. The common search results between
+  results of both queries of both approaches are Snow and Winter_storm. Lucene seems to do a better
+  job than BM25 for ranking Snow and Winter_storm same or higher for both the queries
+- Interesting to see that top doc in each approach does not appear at all in the other approach's
+  Top 5 docs. On skimming both of them, for a user firing snow accumulation, both of them may seem
+  relevant as both give information about snow accumulation in their own way
+
+------------------------------------------------
+Query8: massive blizzards blizzard
+------------------------------------------------
+
+Lucene Top 5:
+8 Q0 Ground_blizzard 1 0.6129802 LuceneNoStopNoStem
+8 Q0 Blizzard 2 0.5893827 LuceneNoStopNoStem
+8 Q0 Winter_storm 3 0.20934571 LuceneNoStopNoStem
+8 Q0 Severe_weather 4 0.15931144 LuceneNoStopNoStem
+8 Q0 Ice_storm 5 0.14741167 LuceneNoStopNoStem
+
+BM25 Top 5:
+8 Q0 Blizzard 1 16.94077663349563 OkapiBM25NoStopNoStem
+8 Q0 Ground_blizzard 2 16.43792824580051 OkapiBM25NoStopNoStem
+8 Q0 Winter_storm 3 13.063613231448704 OkapiBM25NoStopNoStem
+8 Q0 Severe_weather 4 13.039184094112152 OkapiBM25NoStopNoStem
+8 Q0 Cold_wave 5 11.8698384497578 OkapiBM25NoStopNoStem
+
+Remarks:
+- 4 docs in common with different rankings for Ground_blizzard and Blizzard,
+  same ranking for Winter_storm and Severe_weather
+- For Lucene Top 5, 1st and 2nd have scores around, followed by a very large drop in scores
+  between 2nd and 3rd, followed by 3rd, 4th and 5th having scores around
+- For BM25 Top 5, 1st and 2nd have scores around, followed by a very large drop in scores
+  between 2nd and 3rd, followed by 3rd and 4th having scores around, followed by another drop,
+  smaller as compared to the previous one
+- For the given query, on skimming Ground_blizzard and Blizzard, it seems that Blizzard maybe more
+  relevant to the user, as given by BM25
+
+------------------------------------------------
+Query9: new york city subway
+------------------------------------------------
+
+Lucene Top 5:
+9 Q0 New_York_City 1 0.31385395 LuceneNoStopNoStem
+9 Q0 New_York_(state) 2 0.26394403 LuceneNoStopNoStem
+9 Q0 ISS_(disambiguation) 3 0.22066127 LuceneNoStopNoStem
+9 Q0 Hurricane_Sandy 4 0.18381126 LuceneNoStopNoStem
+9 Q0 Washington_Metro 5 0.1825976 LuceneNoStopNoStem
+
+BM25 Top 5:
+9 Q0 Washington_Metro 1 6.473816787842639 OkapiBM25NoStopNoStem
+9 Q0 New_York_City 2 5.870844330929159 OkapiBM25NoStopNoStem
+9 Q0 Hurricane_Sandy 3 4.6426228240276135 OkapiBM25NoStopNoStem
+9 Q0 The_Checks 4 4.447795918645171 OkapiBM25NoStopNoStem
+9 Q0 Columbia_University 5 3.8337545134690405 OkapiBM25NoStopNoStem
+
+Remarks:
+- 3 docs in common with different rankings (New_York_City, Hurricane_Sandy, Washington_Metro)
+- For Lucene Top 5, 4th and 5th have scores around, otherwise there are comparatively large
+  differences between consecutive scores
+- For BM25 Top 5, 3rd and 4th have scores around, otherwise there are comparatively very large
+  differences between consecutive scores
+- For the given query, on skimming all the above docs, it seems that some give information
+  about New York City but not subway (New_York_City, New_York_(state), Columbia_University),
+  some about subway but not New York City (Washington_Metro),
+  while some look totally irrelevant (ISS_(disambiguation), Hurricane_Sandy, The_Checks)
+- Thus, the results don't look much satisfiable maybe because of the limited corpus

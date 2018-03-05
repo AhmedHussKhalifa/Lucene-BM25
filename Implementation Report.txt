@@ -1,0 +1,23 @@
+TASK 1:
+
+Explaining implementation of HW4.java
+- Firstly, indexes are created taking the files in 'Tokenization_Outputs' as inputs
+  by using indexFileOrDirectory method provided by Lucene
+- Then, a searcher is created using IndexSearcher method
+- For each query in 'Queries.txt', a collector is created for showing top 100 search results
+  using the TopScoreDocCollector method
+- Using the searcher, collector and query, hits of type ScoreDoc[] is generated containg
+  docIDs and scores of each of the top 100 documents, which are then written
+  in output file 'Scores.txt'
+
+TASK 2:
+
+Explaining implementation of task2.py
+- Firstly, a dictionary 'uni_tokens_dict' is generated using 'Unigrams.txt' with key
+  as token and value as an array whose each element contains docID and term frequency key-value pair
+- Then, 'scores_calculation' function is called to calculate scores of documents for each query in
+  'Queries.txt' using BM25 algorithm
+- All docIDs, average document length, and document lengths of each document are extracted
+  from the input files and BM25 scores are computed for each document
+- Then, documents are sorted in decreasing order of BM25 scores and top 100 documents are written
+  in output file 'Scores.txt'
